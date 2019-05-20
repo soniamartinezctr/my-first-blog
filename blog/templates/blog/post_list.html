@@ -18,5 +18,12 @@
             <h2><a href="">Python</a></h2>
             <p>Este es un curso introductorio de Python, el cual te servidrá de referencia para que puedas adentrarte al mundo de la programción, en este curso te puedes inscrcibir de manera gratuita. <a href="   https://www.udemy.com/aprende-el-lenguaje-de-programacion-python3-practicando/learn/v4/t/lecture/14215438?start=0">Consultalo aquí</a></p>
         </div>
+        <div>
+            {% for post in  posts %} 
+                <p>{{ post.published_date }}</p>
+                <h2><a href="#">{{ post.title}}</a></h2>
+                <p>{{ post.text|linebreaksbr}}</p>
+            {% endfor%}
+        </div>
     </body>
 </html>
